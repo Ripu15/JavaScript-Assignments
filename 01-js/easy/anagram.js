@@ -8,11 +8,15 @@
 */
 function isAnagram(str1, str2) {
 
+  //checking length of both strings
   if (str1.length !== str2.length) {
       return false;
   }
-
-
+//steps to sort string :
+//toLowerCase(): converts string to lowercase
+//split(''): convert string to array of characters
+//sort(): sort the array of chars in alphabetical order
+//join(''): converting arr of chars into string
   function sortString(str) {
       return str.toLowerCase().split('').sort().join('');
   }
@@ -21,4 +25,6 @@ function isAnagram(str1, str2) {
   return sortString(str1) === sortString(str2);
 }
 
+// let ana =isAnagram('noway','WayNo');
+// console.log(ana);
 module.exports = isAnagram;
