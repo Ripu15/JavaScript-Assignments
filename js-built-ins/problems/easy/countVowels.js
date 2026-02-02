@@ -26,9 +26,19 @@
 */
 
 function countVowels(str) {
-  // Your code here
-}
+  let count = 0;
+  for(let i = 0; i < str.length; i++){
+    if(str[i] == 'a'||str[i] == 'A'||str[i] == 'e'||str[i] == 'E'||str[i] == 'i'||str[i] == 'I'||str[i] == 'o'||str[i] == 'O'||str[i] == 'u'||str[i] == 'U'){
+      count ++;
+    }
+  }
+   return count;
 
+}
+// let count1 =countVowels("Ripu1098daman");
+// console.log(count1);
+// let count2 =countVowels("Ripu1098daman Singh");
+// console.log(count2);
 module.exports = { countVowels };
 
 

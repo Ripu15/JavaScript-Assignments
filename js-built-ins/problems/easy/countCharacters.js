@@ -21,15 +21,22 @@
 
 const countCharacters = (statement) => {
   let result = {};
+  //charAt() is a 'string method' used to get the character
+  //  at a specific index in a string.
   for (let i = 0; i < statement.length; i++) {
     let char = statement.charAt(i);
     if (result[char]) {
       result[char]++;
+      console.log(result[char]);
     } else {
       result[char] = 1;
     }
   }
   return result;
 };
+// let obj = countCharacters("I am Ripudaman Singh, I am a male");
+// let obj1 = countCharacters("");
+// console.log(obj);
+// console.log(obj1);
 module.exports = countCharacters;
 

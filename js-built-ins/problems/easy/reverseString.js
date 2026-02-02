@@ -19,7 +19,18 @@
 */
 
 function reverseString(str) {
-  // Your code here
+  if(str == ""){
+    return "";
+  }
+  //reverse(): This method reverses the order of elements in the array, swapping the first element with the last, and so on.
+  let revStr = str.split('').reverse().join('');
+  return revStr;
 }
 
+// let revStr1 =  reverseString("Ripudaman");
+// let revStr2 = reverseString("");
+// let revStr3 = reverseString("Ripudaman Singh");
+// console.log(revStr1);
+// console.log(revStr2);
+// console.log(revStr3);
 module.exports = reverseString;

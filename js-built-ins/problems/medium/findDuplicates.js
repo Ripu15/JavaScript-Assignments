@@ -20,6 +20,7 @@
 
 
 function findDuplicates(arr) {
+  //filter() is an array method that creates a new array containing only the elements that pass a condition.
   return arr.filter((ele, index) => arr.indexOf(ele) !== index);
 }
 

@@ -7,19 +7,17 @@
 */
 
 function isPalindrome(str) {
-    let strCase = str.toLowerCase();
-    let len = strCase.length;
-    for(let i = 0; i < len/2; i++){
-      if(strCase[i] != strCase[len-i]){
-        console.log(strCase[i]);
-        console.log(strCase[len-i-1]);
+  //convert str to lower case and remove anything like , ! @ " " etc
+    let cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g,'');
+    let len = cleanStr.length;
+
+    for(let i = 0; i < len/2; i++){   
+      if(cleanStr[i] != cleanStr[len-i-1]){
         return false;
-      }
-       console.log(strCase[i]);
-       console.log(strCase[len-i-1]);
+      }     
     }
     return true;
 }
-let bool = isPalindrome('mamdam');
-console.log(bool);
+// let bool = isPalindrome('madam');
+// console.log(bool);
 module.exports = isPalindrome;

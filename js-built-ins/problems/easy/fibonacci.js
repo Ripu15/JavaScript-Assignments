@@ -36,16 +36,52 @@
   - `npm run test-fibonacci`
 */
 
-
+//[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 // Iterative Fibonacci function
 function fibonacci(n) {
-  // Your code here
+  let fibbo = [];
+  let firstElement = 0, secondElement = 1;
+  fibbo.push(firstElement);
+  fibbo.push(secondElement);
+ 
+  for(let i = 2; i < n; i++){
+    let next = fibbo[i-2] + fibbo[i-1];
+    fibbo.push(next);
+  }
+  return fibbo;
+
 }
+
+
 
 // Recursive Fibonacci function
 function fibonacciRecursive(n) {
-  // Your code here
+  let fibbo = [];
+  let firstElement = 0 ,secondElement = 1;
+  fibbo.push(firstElement);
+  fibbo.push(secondElement);
+  if(n==1){
+    return 1;
+  }
+  if(n==0){
+    return 0;
+  }
+  for(let i = 2; i <= n ; i++ ){
+    let next = fibbo[i-2] + fibbo[i-1];
+    fibbo.push(next);
+    if(i == n){
+      return fibbo[i];
+    }
+  }
+
+
 }
+
+
+// let fibbo = fibonacci(10);
+// console.log(fibbo);
+// let fibboElement = fibonacciRecursive(10);
+// console.log(fibboElement);
 
 module.exports = { fibonacci, fibonacciRecursive };
 
